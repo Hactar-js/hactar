@@ -186,7 +186,7 @@ See the [documentation](https://hactar-js.github.io/hactar) for more examples
 
 ## Documentation
 
-- [Building a Plugin](https://hactar-js.github.io/hactar/building-a-plugin)
+- [Building a Plugin](https://hactar-js.github.io/hactar/#building-a-plugin)
 - [API Reference](https://hactar-js.github.io/hactar/API)
 - [FAQ](https://hactar-js.github.io/hactar/FAQ)
 
