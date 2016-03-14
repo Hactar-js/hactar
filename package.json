@@ -1,6 +1,6 @@
 {
   "name": "hactar",
-  "version": "0.0.54",
+  "version": "0.0.57",
   "description": "A solution to JavaScript Fatigue. ",
   "main": "lib/index.js",
   "bin": {

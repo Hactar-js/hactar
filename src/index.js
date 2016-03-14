@@ -9,7 +9,7 @@ import parse from 'gitignore-globs'
 import { createStore } from 'redux'
 import { go, spawn, putAsync, CLOSED, chan } from 'js-csp'
 
-const list = val => val.split(' ')
+const list = val => val.split(',')
 
 program
   .version('0.0.5')
@@ -25,11 +25,6 @@ try {
 } catch (e) {
   console.log(chalk.yellow('initiating npm'))
   execSync('npm init', { stdio: [0, 1, 2] })
-
-  if (!program.plugins) {
-    execSync('npm install --save-dev hactar-auto-install@latest', { stdio: [0, 1, 2] })
-  }
-
   packagejson = require(packagejsonPath)
 }
 
@@ -45,7 +40,8 @@ try {
 
 // install plugins and wait for them to finish installing
 if (program.plugins) {
-  execSync(`npm install --save-dev ${program.plugins.join(' ')}`)
+  console.log(`installing plugins; ${program.plugins.join(' ')}`)
+  execSync(`npm install --save-dev ${program.plugins.join(' ')}`, { stdio: [0, 1, 2] })
 }
 
 const flatten = a =>
