@@ -17,10 +17,10 @@ Hactar does this all without any interaction from you. Hactar parses your code, 
 
 A typical Hactar workflow looks like this;
 
-Run Hactar;
+Run Hactar:
 
 ```sh
-$ hactar
+$ hactar -p hactar-babel
 initiating npm
 name: (testcats)
 ...
@@ -85,7 +85,7 @@ $ npm install -g hactar
 Hactar is designed to have almost no interaction. There are no generators you can execute nor things to configure. To use Hactar, you simply run the `hactar` command. The only option available to you is `--plugins`, which you can use to install various Hactar plugins:
 
 ```sh
-$ hactar --plugins plugin-name
+$ hactar --plugins plugin-name,plugin-name
 ```
 
 You can also install a plugin simply by adding it to your dependencies (which is what the --plugins argument does)
@@ -118,7 +118,7 @@ Hactar is immediately beneficial today. You don't need a ton of plugins for it t
 
 Hactar is oriented towards tiny plugins that do one thing well (like for example, adding babel support), so listing them all here would be overwhelming. However, there are large plugins that serve as presets, they wrap multiple other plugins and configure them to work well with specific types of projects. Here are some of them;
 
-- [hactar-auto-installer](https://github.com/Hactar-js/hactar-auto-installer) A plugin that parses your imports and automatically installs missing dependencies. It is only plugin installed by default.
+- [hactar-auto-installer](https://github.com/Hactar-js/hactar-auto-installer) A plugin that parses your imports and automatically installs missing dependencies.
 - [hactar-babel](https://github.com/Hactar-js/hactar-babel) Provides all the babel plugins that do things like configure ES62105 preset, detect stage-0 features, react etc.
 
 You can find all the existing Hactar plugins by searching for _hactar_ on [npm](https://www.npmjs.com/search?q=hactar)
