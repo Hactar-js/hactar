@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>API Reference</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-api">
+        <div class="header-nav">
+          <div class="right">
+          </div>
+        </div>
+        <div class="markdown-body"><h2 id="api-reference">API Reference</h2>
+<p>Hactar has a very minimal API by design</p>
+<h2 id="cli-options">CLI Options</h2>
+<h3 id="plugins-p">plugins, -p</h3>
+<p>Plugins to install using npm. Any plugins passed to it are added to devDependencies in package.json. You can install plugins the exact same way using npm:</p>
+<pre><code class="lang-sh">$ npm install --save-dev hactar-plugin-name
+</code></pre>
+<h2 id="plugins">Plugins</h2>
+<h3 id="function*-saga(action-channel-getstate)">function* saga(action, channel, getState)</h3>
+<p>A saga is a generator function that gets Flux actions, a channel, and state (set by other plugins)</p>
+<h4 id="arguments">Arguments</h4>
+<ol>
+<li>action: A Flux standard action with a <code>type</code> and <code>payload</code> keys. For example:</li>
+</ol>
+<pre><code class="lang-js">{type: <span class="pl-s">&apos;ADD_FILE&apos;</span>, payload; { filepath: <span class="pl-s">&apos;~/project/src/index.js&apos;</span>}}
+</code></pre>
+<ol start="2">
+<li>
+<p>channel: A <a href="https://github.com/ubolonton/js-csp">js-csp</a> channel. See the js-csp docs for the shape of its <a href="https://github.com/ubolonton/js-csp/blob/master/doc/basic.md#channels">API</a></p>
+</li>
+<li>
+<p>getState: A redux getState function. Returns the current state of Hactar that plugins have added to. See the Redux docs for how <a href="https://github.com/reactjs/redux/blob/master/docs/api/Store.md#getState">its API</a></p>
+</li>
+</ol>
+<h4 id="returns">Returns</h4>
+<p>(Nothing): Sagas should only dispatch actions or yield.</p>
+<h3 id="function-reducer(state-action)">function reducer(state, action)</h3>
+<p>A reducer function. They are the same as Redux reducers, so read its <a href="https://github.com/reactjs/redux/blob/master/docs/Glossary.md#reducer">docs</a></p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="index.html"><span class="title">Building a Plugin</span></a></div>
+          <div class="right"><a href="FAQ.html"><span class="label">Next: </span><span class="title">FAQ</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">Building a Plugin</a>
+            </li>
+            <li class="menu-item -level-1"><a href="API.html" class="link title -active link-api">API Reference</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#api-reference" class="hlink link-api-reference">API Reference</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#cli-options" class="hlink link-cli-options">CLI Options</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#plugins-p" class="hlink link-plugins-p">plugins, -p</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="heading-item -depth-2"><a href="#plugins" class="hlink link-plugins">Plugins</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#function*-saga(action-channel-getstate)" class="hlink link-function*-saga(action-channel-getstate)">function* saga(action, channel, getState)</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a href="#function-reducer(state-action)" class="hlink link-function-reducer(state-action)">function reducer(state, action)</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="FAQ.html" class="link title  link-faq">FAQ</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

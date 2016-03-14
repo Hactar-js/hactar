@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>FAQ</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-faq">
+        <div class="header-nav">
+          <div class="right">
+          </div>
+        </div>
+        <div class="markdown-body"><h2 id="why-not-use-rxjs-redux-saga-or-x-library">Why not use RXJS, redux-saga, or x library?</h2>
+<p>The API for plugins is intentionally not idiomatic nor elegant. It sacrifices elegance in pursuit of the ultimate pragmatism. The main goal of Hactar is to let you write plugins while you work on projects. While the goals of Hactar could be implemented much cleaner in a library designed for handling asynchronous side-effects it wouldn&apos;t be understandable at a glance. I don&apos;t want anyone using Hactar to have to read some library&apos;s docs to write plugins, however awesome or elegant that library might be.</p>
+<h2 id="how-do-i-create-a-plugin-with-multiple-reducers-or-sagas">How do I create a plugin with multiple reducers or sagas?</h2>
+<p>You don&apos;t. Plugins are designed to be composable, if you want to use multiple sagas or reducers then you simply call them from inside of a higher order function. With sagas it works like this:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span>* <span class="pl-ent">saga2</span>(<span class="hljs-params">action</span>) </span>{
+  <span class="pl-c">// do things</span>
+}
+
+<span class="hljs-function"><span class="pl-k">function</span>* <span class="pl-ent">saga1</span>(<span class="hljs-params">action</span>) </span>{
+  <span class="pl-k">yield</span> saga2(action)
+}
+</code></pre>
+<p>And with reducers like this:</p>
+<pre><code class="lang-js">
+<span class="pl-k">const</span> subReducer = state, action =&gt;  {
+  <span class="pl-k">switch</span> (action.type) {
+    <span class="pl-k">case</span> <span class="pl-s">&apos;DO_THINGS&apos;</span>:
+      <span class="pl-c">// do things</span>
+    <span class="pl-k">default</span>:
+      <span class="pl-k">return</span> state
+  }
+}
+
+<span class="pl-k">const</span> rootReducer = state, action =&gt; {
+  state = {
+    ...state,
+    ...subReducer(state, action)
+  }
+}
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="API.html"><span class="title">API Reference</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">Building a Plugin</a>
+            </li>
+            <li class="menu-item -level-1"><a href="API.html" class="link title  link-api">API Reference</a>
+            </li>
+            <li class="menu-item -level-1"><a href="FAQ.html" class="link title -active link-faq">FAQ</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#why-not-use-rxjs-redux-saga-or-x-library" class="hlink link-why-not-use-rxjs-redux-saga-or-x-library">Why not use RXJS, redux-saga, or x library?</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#how-do-i-create-a-plugin-with-multiple-reducers-or-sagas" class="hlink link-how-do-i-create-a-plugin-with-multiple-reducers-or-sagas">How do I create a plugin with multiple reducers or sagas?</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

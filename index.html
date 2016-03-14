@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>Building a Plugin</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-index">
+        <div class="header-nav">
+          <div class="right">
+          </div>
+        </div>
+        <div class="markdown-body"><h2 id="building-a-plugin">Building a Plugin</h2>
+<p>Developing a plugin for Hactar is easy. The recommended way to start a plugin is by creating a Hactar plugin file <code>hactar.config-plugin.js</code> on a project. This lets you write the solution to your problems while you code. If you run into something that could be automated you simply add it to the config file and rip it out into a plugin later.</p>
+<p>Plugins consist of two parts;</p>
+<ol>
+<li>Sagas that handle asynchronous actions</li>
+<li>Redux reducers which modify state</li>
+</ol>
+<p>Both of these are optional. A valid plugin exports these two functions like this:</p>
+<pre><code class="lang-js"><span class="pl-k">export</span> { saga, reducer }
+</code></pre>
+<p>Let&apos;s start our first plugin. Create a file called <code>hactar.config-plugin.js</code> in the root of your project with the following:</p>
+<pre><code class="lang-js"><span class="pl-c">// Prints hello world to the console</span>
+<span class="hljs-function"><span class="pl-k">function</span>* <span class="pl-ent">helloWorld</span>(<span class="hljs-params"></span>) </span>{
+  <span class="pl-c1">console</span>.log(<span class="pl-s">&apos;hello world&apos;</span>)
+}
+
+<span class="pl-k">export</span> { saga: helloWorld }
+</code></pre>
+<p>A Hactar config has the same shape as a plugin, if you want to configure or add state for Hactar to use, you do it via a reducer. This makes it easy to develop a plugin (or plugins) that are specific to a project or to develop a plugin without hassling with npm links.</p>
+<p>When you are ready to you can simply rip out the plugin, give it a package.json and you are done.</p>
+<h2 id="communicating-with-other-plugins">Communicating With Other Plugins</h2>
+<p>There are two ways to communicate between plugins:</p>
+<ol>
+<li>Add state via reducer</li>
+<li>Dispatch an action to a channel</li>
+</ol>
+<p>Reducers work exactly like Redux reducers. If we wanted to for example, add a key with details about cats we could do the following:</p>
+<pre><code class="lang-js"><span class="pl-k">const</span> reducer = state, action =&gt; {
+  <span class="pl-k">switch</span> (action.type) {
+    <span class="pl-k">case</span> <span class="pl-s">&apos;INITIALIZE&apos;</span>:
+      <span class="pl-k">return</span> {
+        ...state,
+        cats: <span class="pl-s">&apos;r awesome&apos;</span>
+      }
+    <span class="pl-k">default</span>:
+      <span class="pl-k">return</span> state
+  }
+}
+</code></pre>
+<p>Every saga receives a channel as its second argument, you can put any action onto this channel and another plugin&apos;s saga or reducer can then pick it up:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span>* <span class="pl-ent">saga</span>(<span class="hljs-params">action, ch, getState</span>) </span>{
+  <span class="pl-k">if</span>(getState().hasDogs) {
+    <span class="pl-k">yield</span> put(ch, {type: <span class="pl-s">&apos;DOGS_R_AWESOME&apos;</span>})
+  }
+}
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="right"><a href="API.html"><span class="label">Next: </span><span class="title">API Reference</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">Building a Plugin</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#building-a-plugin" class="hlink link-building-a-plugin">Building a Plugin</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#communicating-with-other-plugins" class="hlink link-communicating-with-other-plugins">Communicating With Other Plugins</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="API.html" class="link title  link-api">API Reference</a>
+            </li>
+            <li class="menu-item -level-1"><a href="FAQ.html" class="link title  link-faq">FAQ</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

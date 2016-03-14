@@ -1,0 +1,166 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "Building a Plugin",
+        "source": "docs/BuildingaPlugin.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Building a Plugin",
+            "depth": 2,
+            "id": "building-a-plugin"
+          },
+          {
+            "title": "Communicating With Other Plugins",
+            "depth": 2,
+            "id": "communicating-with-other-plugins"
+          }
+        ]
+      },
+      {
+        "title": "API Reference",
+        "source": "docs/API.md",
+        "url": "API.html",
+        "slug": "api",
+        "headings": [
+          {
+            "title": "API Reference",
+            "depth": 2,
+            "id": "api-reference"
+          },
+          {
+            "title": "CLI Options",
+            "depth": 2,
+            "id": "cli-options",
+            "headings": [
+              {
+                "title": "plugins, -p",
+                "depth": 3,
+                "id": "plugins-p"
+              }
+            ]
+          },
+          {
+            "title": "Plugins",
+            "depth": 2,
+            "id": "plugins",
+            "headings": [
+              {
+                "title": "function* saga(action, channel, getState)",
+                "depth": 3,
+                "id": "function*-saga(action-channel-getstate)"
+              },
+              {
+                "title": "function reducer(state, action)",
+                "depth": 3,
+                "id": "function-reducer(state-action)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "FAQ",
+        "source": "docs/FAQ.md",
+        "url": "FAQ.html",
+        "slug": "faq",
+        "headings": [
+          {
+            "title": "Why not use RXJS, redux-saga, or x library?",
+            "depth": 2,
+            "id": "why-not-use-rxjs-redux-saga-or-x-library"
+          },
+          {
+            "title": "How do I create a plugin with multiple reducers or sagas?",
+            "depth": 2,
+            "id": "how-do-i-create-a-plugin-with-multiple-reducers-or-sagas"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "docs/BuildingaPlugin.md",
+      "title": "Building a Plugin",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Building a Plugin",
+          "depth": 2,
+          "id": "building-a-plugin"
+        },
+        {
+          "title": "Communicating With Other Plugins",
+          "depth": 2,
+          "id": "communicating-with-other-plugins"
+        }
+      ]
+    },
+    "API.html": {
+      "source": "docs/API.md",
+      "title": "API Reference",
+      "slug": "api",
+      "headings": [
+        {
+          "title": "API Reference",
+          "depth": 2,
+          "id": "api-reference"
+        },
+        {
+          "title": "CLI Options",
+          "depth": 2,
+          "id": "cli-options",
+          "headings": [
+            {
+              "title": "plugins, -p",
+              "depth": 3,
+              "id": "plugins-p"
+            }
+          ]
+        },
+        {
+          "title": "Plugins",
+          "depth": 2,
+          "id": "plugins",
+          "headings": [
+            {
+              "title": "function* saga(action, channel, getState)",
+              "depth": 3,
+              "id": "function*-saga(action-channel-getstate)"
+            },
+            {
+              "title": "function reducer(state, action)",
+              "depth": 3,
+              "id": "function-reducer(state-action)"
+            }
+          ]
+        }
+      ]
+    },
+    "FAQ.html": {
+      "source": "docs/FAQ.md",
+      "title": "FAQ",
+      "slug": "faq",
+      "headings": [
+        {
+          "title": "Why not use RXJS, redux-saga, or x library?",
+          "depth": 2,
+          "id": "why-not-use-rxjs-redux-saga-or-x-library"
+        },
+        {
+          "title": "How do I create a plugin with multiple reducers or sagas?",
+          "depth": 2,
+          "id": "how-do-i-create-a-plugin-with-multiple-reducers-or-sagas"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "docs/BuildingaPlugin.md": "index.html",
+    "docs/API.md": "API.html",
+    "docs/FAQ.md": "FAQ.html"
+  }
+}
