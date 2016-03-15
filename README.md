@@ -15,6 +15,8 @@ Hactar can currently;
 
 Hactar does this all without any interaction from you. Hactar parses your code, figures out what you are coding and installs, configures, and writes code to make it work. You start writing code and Hactar does the rest.
 
+Here is a [screencast](https://www.dropbox.com/s/7lwd3efcqh4scl4/Hactar-Screencast.mp4?dl=0) for the visual learners among us
+
 A typical Hactar workflow looks like this;
 
 Run Hactar:
