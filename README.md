@@ -4,7 +4,7 @@
 
 Hactar is the solution to [JavaScript Fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4). Hactar configures build tools, installs dependencies, adds imports, creates tests etc, all automatically. There are no boilerplates to clone, no generators to run, and no build tools to configure. To use Hactar you simply start writing code and Hactar figures out what you want to do and the best practices to make it happen. Start writing ES6 and it will add Babel, start writing sass and it will add node-sass, import an image and it will add Webpack etc
 
-With Hactar, there is no more starting projects with configuration and boilerplate. Using Hactar you start projects by starting them.
+No more starting projects with configuration and boilerplate, Hactar let's you start writing code immediately.
 
 Hactar can currently;
 
@@ -13,7 +13,7 @@ Hactar can currently;
 - Detect experimental ES6 features and configure Babel presets like stage-0
 - Automatically detect React and add babel-react plugins
 
-Hactar does this all without any interaction from you. Hactar parses your code, figures out what you are coding and installs, configures, and writes code to make it work. You start writing code and Hactar does the rest.
+Hactar does this all without any interaction from you. Hactar parses your code, figures out what you are coding, then installs, configures, and writes code to make it work. You start writing code and Hactar does the rest.
 
 Here is a [screencast](https://www.dropbox.com/s/7lwd3efcqh4scl4/Hactar-Screencast.mp4?dl=0) for the visual learners among us
 
