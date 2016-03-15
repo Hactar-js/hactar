@@ -123,7 +123,7 @@ Hactar is immediately beneficial today. Hactar is oriented towards tiny plugins 
 
 Hactar currently has the following plugins;
 
-- [hactar-auto-installer](https://github.com/Hactar-js/hactar-auto-install) A plugin that parses your imports and automatically installs missing dependencies.
+- [hactar-auto-install](https://github.com/Hactar-js/hactar-auto-install) A plugin that parses your imports and automatically installs missing dependencies.
 - [hactar-babel](https://github.com/Hactar-js/hactar-babel) Provides all the babel plugins that do things like configure ES62105 preset, detect stage-0 features, react etc.
 
 You can find all the existing Hactar plugins by searching for _hactar_ on [npm](https://www.npmjs.com/search?q=hactar)
