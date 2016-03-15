@@ -56,21 +56,22 @@ installing react
 installing react-toolbox
 ```
 
+## Table of Contents
+
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Hactar](#hactar)
-	- [Installation](#installation)
-	- [Usage](#usage)
-	- [The Principles of Hactar](#the-principles-of-hactar)
-		- [1. Stay out of your way](#1-stay-out-of-your-way)
-		- [2. Be massively hackable](#2-be-massively-hackable)
-		- [3. Do not be a dependency](#3-do-not-be-a-dependency)
-		- [4. Lots of small wins](#4-lots-of-small-wins)
-	- [Presets and Plugins](#presets-and-plugins)
-	- [How Hactar Works](#how-hactar-works)
-	- [Documentation](#documentation)
-	- [License](#license)
-	- [Support](#support)
+- [Installation](#installation)
+- [Usage](#usage)
+- [The Principles of Hactar](#the-principles-of-hactar)
+	- [1. Stay out of your way](#1-stay-out-of-your-way)
+	- [2. Be massively hackable](#2-be-massively-hackable)
+	- [3. Do not be a dependency](#3-do-not-be-a-dependency)
+	- [4. Lots of small wins](#4-lots-of-small-wins)
+- [Presets and Plugins](#presets-and-plugins)
+- [How Hactar Works](#how-hactar-works)
+- [Documentation](#documentation)
+- [License](#license)
+- [Support](#support)
 
 <!-- /TOC -->
 
@@ -108,17 +109,19 @@ Hactar plugins are simple ES6 generator functions so you already know how to wri
 
 ### 3. Do not be a dependency
 
-There are many solutions to JavaScript Fatigue but they all require you to _adopt_ them. Your code becomes dependent on the solution to run and with out it, it is useless. You become stuck with the solution, your codebase becomes tied to it forever. If you want someone else to contribute to the code, they now need to learn the tool and it's ecosystem. When your solution to fatigue is a dependency the solution can become the fatigue.
+There are many solutions to JavaScript Fatigue but most require you to _adopt_ them and without them your code becomes useless, unable to be used with the solution. And if you want someone else to contribute to the code, they now need to learn the tool and its ecosystem.
 
-Because Hactar simply writes code, your code is not dependent on it. Nothing Hactar does is dependent on Hactar to work. No one contributing to your code even need know Hactar exists. Hactar is transparent and designed to fade into the background. It is just another coder on your team, one you pay with CPU. If Hactar stops being useful you can simply drop it.
+When your solution to fatigue is a dependency the solution can become the fatigue.
+
+Because Hactar simply writes code, your code is not dependent on it. Nothing Hactar does is dependent on Hactar to work. No one contributing to your code even need know Hactar exists. Hactar is transparent and designed to fade into the background. It is just another coder on your team -- one you pay with CPU. If Hactar stops being useful you can simply fire it.
 
 ### 4. Lots of small wins
 
-Hactar is immediately beneficial today. You don't need a ton of plugins for it to come together and work for you. It has a ton of little things that make your life better now. Too many solutions to fatigue are "all or nothing" propositions that require huge wins before the little wins. How many have set out to solve their fatigue only to realize 6 months later things that the ecosystem has changed too much making it useless, or that it was too ambitious, so they give up and return to what works good enough. Hactar is not like that, it comes with little wins today and can be grown to be so much more. Hactar evolves fast and is designed to be changeable and hackable, even while you work on your projects. Every plugin is designed to improve your coding experience in some tiny way; whether it is extracting tests from comments or automatically adding a preset to babel. It is always useful now not later.
+Hactar is immediately beneficial today. Hactar is oriented towards tiny plugins that do one thing well (like for example, adding babel support). You don't need a ton of plugins for it to come together and work for you. It has a ton of little things that make your life better now. Too many solutions to fatigue are "all or nothing" propositions that require huge wins before the little wins. How many have set out to solve their fatigue only to realize 6 months later things that the ecosystem has changed too much making it useless, or that it was too ambitious, so they give up and return to what works good enough. Hactar is not like that, it comes with little wins today and can be grown to be so much more. Hactar evolves fast and is designed to be changeable and hackable, even while you work on your projects. Every plugin is designed to improve your coding experience in some tiny way; whether it is extracting tests from comments or automatically adding a preset to babel. It is always useful now not later.
 
-## Presets and Plugins
+## Plugins
 
-Hactar is oriented towards tiny plugins that do one thing well (like for example, adding babel support), so listing them all here would be overwhelming. However, there are large plugins that serve as presets, they wrap multiple other plugins and configure them to work well with specific types of projects. Here are some of them;
+Hactar currently has the following plugins;
 
 - [hactar-auto-installer](https://github.com/Hactar-js/hactar-auto-installer) A plugin that parses your imports and automatically installs missing dependencies.
 - [hactar-babel](https://github.com/Hactar-js/hactar-babel) Provides all the babel plugins that do things like configure ES62105 preset, detect stage-0 features, react etc.
