@@ -109,7 +109,7 @@ Hactar plugins are simple ES6 generator functions so you already know how to wri
 
 ### 3. Do not be a dependency
 
-There are many solutions to JavaScript Fatigue but most require you to _adopt_ them and without them your code becomes useless, unable to be used with the solution. And if you want someone else to contribute to the code, they now need to learn the tool and its ecosystem.
+There are many solutions to JavaScript Fatigue but most require you to _adopt_ them and without them your code becomes useless, unable to be used without the solution. And if you want someone else to contribute to the code, they now need to learn the tool and its ecosystem.
 
 When your solution to fatigue is a dependency the solution can become the fatigue.
 
