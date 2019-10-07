@@ -1,0 +1,9 @@
+* DUCK
+
+Rubber duck debugging notes
+
+** TODOS
+
+- [ ] add next-css
+- [ ] add postcss-variables
+- [ ] figure out shadow-cljs next js additions

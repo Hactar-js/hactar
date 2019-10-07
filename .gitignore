@@ -1,4 +1,4 @@
+.shadow-cljs
 node_modules
-lib
-_docpress
-bin
+private
+main.js

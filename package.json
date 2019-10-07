@@ -1,49 +1,52 @@
 {
   "name": "hactar",
-  "version": "0.0.57",
-  "description": "A solution to JavaScript Fatigue. ",
-  "main": "lib/index.js",
-  "bin": {
-    "hactar": "./bin/index.js"
-  },
+  "version": "2.0.0",
+  "description": "A zero config dev tool",
+  "main": "main.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "build:docs": "docpress build",
-    "deploy:docs": "npm run build && git-directory-deploy --directory _docpress/",
-    "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "compile": "shadow-cljs compile app",
+    "start": "next start",
+    "butts": "next",
+    "cats": "next",
+    "but": "next start",
+    "dad": "next build",
+    "dud": "next",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hactar-js/hactar.git"
+    "url": "git+https://github.com/k2052/hactar.git"
   },
   "keywords": [
-    "generator"
+    "k-2052"
   ],
   "author": "K-2052",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hactar-js/hactar/issues"
+    "url": "https://github.com/k2052/hactar/issues"
   },
-  "homepage": "https://github.com/Hactar-js/hactar#readme",
+  "homepage": "https://github.com/k2052/hactar#readme",
   "devDependencies": {
-    "babel-cli": "^6.5.1",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "docpress": "^0.6.11",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.0",
-    "git-directory-deploy": "^1.3.0"
+    "shadow-cljs": "^2.8.51",
+    "source-map-support": "^0.5.13",
+    "ws": "^7.1.2"
   },
   "dependencies": {
-    "babel-polyfill": "^6.5.0",
-    "chalk": "^1.1.1",
-    "chokidar": "^1.4.2",
-    "commander": "^2.9.0",
-    "classnames": "^2.2.3",
-    "gitignore-globs": "^0.1.1",
-    "hactar-util": "^0.0.1",
-    "js-csp": "^0.5.0",
-    "redux": "^3.3.1"
+    "@mdx-js/loader": "^1.4.5",
+    "@next/mdx": "^9.0.6",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.0.2",
+    "command-line-commands": "^2.0.1",
+    "jscodeshift": "^0.6.4",
+    "minimist": "^1.2.0",
+    "next": "^9.0.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-react-svg": "^1.1.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "recursive-copy": "^2.0.10"
   }
 }

@@ -1,0 +1,11 @@
+{:source-paths ["src"]
+ :dependencies [[cider/cider-nrepl "0.22.0-beta8"]
+                [cljs-tooling "0.3.1"]
+                [binaryage/oops "0.7.0"]
+                [fullcontact/full.async "1.0.0"]
+                [mount "0.1.16"]
+                [cljfmt "0.6.4"]]
+ :builds {:app {:target :node-script
+                :output-to "main.js"
+                :main main/main!
+                :devtools {:after-load main/reload!}}}}
